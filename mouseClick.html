@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<h1>Here I will tell how many time you click mouse</h1>
+<p>Mouse Press <span>0</span> times.</p>
+<div style="height:100px;">Press down and release the mouse button over this div element.</div>
+</body>
+</html>
+
+<script>
+var x = 0;
+$(document).ready(function(){
+  $("div").mouseup(function(){
+    $(this).after("<p style='color:green;'>Mouse button released.</p>");
+    $("span").text( x+= 1);
+  });
+  $("div").mousedown(function(){
+    $(this).after("<p style='color:purple;'>Mouse button pressed down.</p>");
+  });
+});
+</script>

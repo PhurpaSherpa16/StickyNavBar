@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<h1>Here I will tell how many time you click mouse</h1>
+<p>Mouse Press <span>0</span> times.</p>
+<div style="height:100px;">Enter your name: <input type="text"></div>
+</body>
+</html>
+
+<script>
+var x = 0;
+$(document).ready(function(){
+  $("input").keydown(function(){
+    $(this).after("<p style='color:green;'>key  released.</p>");
+    $("span").text( x+= 1);
+  });
+  $("input").keyup(function(){
+    $(this).after("<p style='color:purple;'>key  pressed down.</p>");
+  });
+});
+</script>
+
+<script>
+/*var x = 0;
+$(document).ready(function(){
+  $("input").keypress(function(){
+    $(this).after("<p style='color:green;'>key  press.</p>");
+    $("span").text( x+= 1);
+  });
+
+});*/
+</script>

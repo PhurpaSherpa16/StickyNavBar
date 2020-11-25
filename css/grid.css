@@ -1,0 +1,161 @@
+body{
+	margin: 0px;
+	padding: 0px;
+	font-family: Dilan Whemsy;
+}
+nav{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 70px;
+	padding: 10px 100px;
+	box-sizing: border-box;
+	transition: .5s;
+	float: right;
+	background-color: black;
+}
+nav.black{
+	background-color: #16171c;
+	height: 80px;
+	padding: 10px 80px;
+}
+
+nav #icon{
+	font-size: 24px;
+	color: blue;
+	line-height: 80px;
+	float: right;
+	margin-right: 40px;
+	cursor: pointer;
+	display: none;
+}
+
+nav div .logo{
+	transition: .5s;
+	float: left;
+	margin-top: 10px;
+}
+nav ul{
+	float: right;
+	margin-top: 20px;
+}
+nav ul li{
+	display: inline;
+}
+nav ul li a{
+	font-size: 20px;
+	font-weight: bold;
+	padding: 5px 20px;
+	font-family: sans-serif;
+	transition: .5s;
+	font-variant: small-caps;
+}
+nav ul li .active, nav ul li a:hover{
+	background-color: red;
+	color: white;
+	border-radius: 5px;
+	text-decoration: none;
+}
+section#sec1{
+	width: 100%;
+	min-height: 100vh;
+	background: url(../image/mb1.jpg) no-repeat center;
+	background-size: cover;
+}
+
+section.secContent{
+	width: 100%;
+	min-height: 100vh;
+}
+
+#desc{
+	padding: 20px;
+}
+#desc p{
+	text-align: justify;
+}
+
+#desc h1{
+	font-family: Dilan Whemsy;
+
+}
+
+footer{
+	min-height: 50px;
+	background-color: black;
+}
+
+
+@media (max-width: 1048px){
+	nav #icon{
+		display: block;
+	}
+	nav ul{
+		position: relative;
+		width: 100%;
+		height: 50vh;
+		bottom: -1000px;
+		left: 0px;
+		text-align: center;
+		margin: 0px;
+		padding: 0px;
+		background-color: white;
+		border-radius: 20px;
+		opacity: 0.9;
+		transition: .5s;
+		
+	}
+	nav ul li{
+		display: block;
+		margin-bottom: 20px;
+		margin-top: 20px;
+	}
+
+	nav ul.show{
+		bottom: 0px;
+	}
+	/* for showing menu from bottom to top animation use 
+	nav ul{
+		position: relative;
+		width: 100%;
+		height: 50vh;
+		bottom: -1000px;
+		left: 0px;
+		text-align: center;
+		margin: 0px;
+		padding: 0px;
+		background-color: white;
+		border-radius: 20px;
+		opacity: 0.9;
+		transition: .5s;
+		
+	}
+
+	nav ul.show{
+		bottom: 0px;
+	}
+	*/
+	/* for showing menu from top to bottom animation use 
+	nav ul{
+		position: relative;
+		width: 100%;
+		height: 50vh;
+		top: -1000px;
+		left: 0px;
+		text-align: center;
+		margin: 0px;
+		padding: 0px;
+		background-color: white;
+		border-radius: 20px;
+		opacity: 0.9;
+		transition: .5s;
+		
+	}
+
+	nav ul.show{
+		top: 0px;
+	}
+	like you can do rest slidng right to left*/
+
+}
